@@ -28,7 +28,7 @@ When your new project is ready for deployment, add a new Heroku application with
 ## Migrations
 Create migrations with following command:
 ```
-knex migrate:make create_bookmark --debug 
+knex migrate:make create_bookmarks --debug 
 ```
 
 ## Store Migrations on Database
