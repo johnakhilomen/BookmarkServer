@@ -1,16 +1,3 @@
-{"message":"Unauthorized request to path: /","level":"error"}
-{"message":"Unauthorized request to path: /","level":"error"}
-{"message":"Unauthorized request to path: /","level":"error"}
-{"message":"Unauthorized request to path: /","level":"error"}
-{"message":"Unauthorized request to path: /bookmarks","level":"error"}
-{"message":"Unauthorized request to path: /bookmarks","level":"error"}
-{"message":"Unauthorized request to path: /bookmarks","level":"error"}
-{"message":"Unauthorized request to path: /bookmarks","level":"error"}
-{"message":"Unauthorized request to path: /bookmarks","level":"error"}
-{"message":"Unauthorized request to path: /bookmarks","level":"error"}
-{"message":"Unauthorized request to path: /bookmarks","level":"error"}
-{"message":"Unauthorized request to path: /bookmarks","level":"error"}
-{"message":"Unauthorized request to path: /bookmarks/1","level":"error"}
-{"message":"Unauthorized request to path: /bookmarks/1","level":"error"}
-{"message":"Unauthorized request to path: /bookmarks/1","level":"error"}
-{"message":"Unauthorized request to path: /bookmarks/","level":"error"}
+{"message":"self signed certificate","level":"error"}
+{"message":"self signed certificate","level":"error"}
+{"message":"select * from \"bookmarks\" - relation \"bookmarks\" does not exist","level":"error"}
