@@ -25,14 +25,38 @@ Run the tests `npm test`
 
 When your new project is ready for deployment, add a new Heroku application with `heroku create`. This will make a new git remote called "heroku" and you can then `npm run deploy` which will push to this remote's master branch.
 
-## Migrations
+## Create boiler plate migration script 
 Create migrations with following command:
 ```
 knex migrate:make create_bookmarks --debug 
 ```
-
-## Store Migrations on Database
-Run migrations in debug mode with following command:
+## Format migration script to create tables
 ```
-knex migrate:latest --debug
+exports.up = function(knex) {
+    return knex.schema.createTableIfNotExists("bookmarks", function(table) {
+        table.increments('id').primary();
+        table.string('title').notNullable();
+        table.string('url').notNullable();
+        table.timestamp('rating');
+        table.boolean('description').defaultTo(false);
+        table.timestamp('date_created').defaultTo(knex.fn.now());
+        table.timestamp('date_updated').defaultTo(knex.fn.now());
+    });
+};
+
+exports.down = function(knex) {
+    return knex.schema.dropTableIfExists("bookmarks");
+};
+
+```
+## Execute Migrations scripts on Database
+Run migrations in debug mode on development environment with following command:
+```
+knex migrate:latest --debug --env development
+```
+
+## Execute Migrations scripts on Database
+Run migrations in debug mode on production environment with following command:
+```
+knex migrate:latest --debug --env production
 ```
